@@ -180,7 +180,10 @@ namespace AplicatieCafenea
         }
         private void BtnInchide_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Sunteți sigur că doriți să închideți aplicația?", "Confirmare", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }
